@@ -1,0 +1,4 @@
+runtime: nodejs16
+service: nodexfirebase
+env_variables:
+  PORT: "80"
