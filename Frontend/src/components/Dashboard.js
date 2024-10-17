@@ -15,7 +15,7 @@ const Dashboard = () => {
     const fetchUsersByRole = async () => {
       try {
         if (Role === "dealer") {
-          const { data } = await axios.get(`http://localhost:8080/customers/${id}`,{
+          const { data } = await axios.get(`https://crudop-with-nodejs-reactjs-firestore.onrender.com/customers/${id}`,{
             headers:{
                 Authorization:`Bearer ${token}`
             }
@@ -23,7 +23,7 @@ const Dashboard = () => {
           console.log("Data from dealer:", data);
           setData(data);
         } else if (Role === "admin") {
-          const { data } = await axios.get('http://localhost:8080/',{
+          const { data } = await axios.get('https://crudop-with-nodejs-reactjs-firestore.onrender.com/',{
             headers:{
                 Authorization:`Bearer ${token}`
             }
@@ -42,7 +42,7 @@ const Dashboard = () => {
 
 const handleDeleteFunction = async (id, user) => {
   try {
-    const url = `http://localhost:8080/delete-${user === "admin" ? "dealer" : "customer"}/${id}`;
+    const url = `https://crudop-with-nodejs-reactjs-firestore.onrender.com/delete-${user === "admin" ? "dealer" : "customer"}/${id}`;
     const response = await axios.get(url,{
       headers:{
           Authorization:`Bearer ${token}`
