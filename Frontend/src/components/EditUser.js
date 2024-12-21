@@ -45,7 +45,7 @@ const AddEditCustomer = () => {
 
   const fetchUserFunction = async (id, user) => {
     try {
-      const { data } = await axios.get(`https://crudop-with-nodejs-reactjs-firestore.onrender.com/${user}/${id}`, {
+      const { data } = await axios.get(`https://multi-role-auth-mern-be.vercel.app/${user}/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -82,7 +82,7 @@ const AddEditCustomer = () => {
   const userUpdateFunction = async (id, user, values) => {
     try {
       const response = await axios.post(
-        `https://crudop-with-nodejs-reactjs-firestore.onrender.com/update-${user}/${id}`,
+        `https://multi-role-auth-mern-be.vercel.app/update-${user}/${id}`,
         values,
         {
           headers: {

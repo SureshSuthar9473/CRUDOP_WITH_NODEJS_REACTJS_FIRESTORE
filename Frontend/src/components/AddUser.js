@@ -44,7 +44,7 @@ const AddEditCustomer = () => {
 
   const addUser = async (id, values, Role) => {
     try {
-      const url = `https://crudop-with-nodejs-reactjs-firestore.onrender.com/new-${Role === "admin" ? "dealer" : "customer"}/${Role === "dealer" ? id : ''}`;
+      const url = `https://multi-role-auth-mern-be.vercel.app/new-${Role === "admin" ? "dealer" : "customer"}/${Role === "dealer" ? id : ''}`;
       
       const res = await axios.post(url, values, {
         headers: {
